@@ -4,10 +4,12 @@ import { NextResponse } from 'next/server';
 
 export default withAuth(
   async function middleware(req) {
-    const pathname = req.nextUrl.pathname;
+    const pathname = req?.nextUrl?.pathname || '/';
 
-    //Manage route protection
-
+    if (!req || !req.nextUrl) {
+      console.error('req or req.nextUrl is undefined!');
+      return NextResponse.error();
+    }
     const isAuth = await getToken({ req });
     const isLoginPage = pathname.startsWith('/login');
 
