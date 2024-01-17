@@ -77,7 +77,7 @@ const Layout = async ({ children }: layoutProps) => {
                   return (
                     <li key={option.id}>
                       <Link
-                        href={option.href}
+                        href="/dashboard/add"
                         className="text-gray-700 hover:text-indigo-600
                         hover:bg-gray-50 group flex gap-3 rounded-md p-2 text-sm leading-6 font-semibold"
                       >
