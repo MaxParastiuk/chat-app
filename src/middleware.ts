@@ -4,32 +4,29 @@ import { NextResponse } from 'next/server';
 
 export default withAuth(
   async function middleware(req) {
-    const pathname = req?.nextUrl?.pathname || '/';
+    const pathname = req.nextUrl.pathname;
 
-    if (!req || !req.nextUrl) {
-      console.error('req or req.nextUrl is undefined!');
-      return NextResponse.error();
-    }
+    // Manage route protection
     const isAuth = await getToken({ req });
     const isLoginPage = pathname.startsWith('/login');
 
     const sensitiveRoutes = ['/dashboard'];
-
-    const isAccessinSensetiveRoute = sensitiveRoutes.some((route) =>
+    const isAccessingSensitiveRoute = sensitiveRoutes.some((route) =>
       pathname.startsWith(route),
     );
 
     if (isLoginPage) {
       if (isAuth) {
-        return NextResponse.redirect(new URL('dashboard', req.url));
+        return NextResponse.redirect(new URL('/dashboard', req.url));
       }
 
       return NextResponse.next();
     }
 
-    if (!isAuth && isAccessinSensetiveRoute) {
+    if (!isAuth && isAccessingSensitiveRoute) {
       return NextResponse.redirect(new URL('/login', req.url));
     }
+
     if (pathname === '/') {
       return NextResponse.redirect(new URL('/dashboard', req.url));
     }
@@ -44,5 +41,5 @@ export default withAuth(
 );
 
 export const config = {
-  matcher: ['/', '/login', '/dashboard/:path*'],
+  matchter: ['/', '/login', '/dashboard/:path*'],
 };
