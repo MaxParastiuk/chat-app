@@ -2,6 +2,5 @@
   "rewrites": [
     { "source": "/login", "destination": "/login" },
     { "source": "/dashboard/:path*", "destination": "/dashboard" },
-    { "source": "/(.*)", "destination": "/" }
   ]
 }
