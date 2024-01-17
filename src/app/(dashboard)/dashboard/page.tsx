@@ -63,6 +63,7 @@ const page: FC<pageProps> = async ({}) => {
                     className="rounded-full"
                     src={friend.image}
                     alt={`${friend.name}`}
+                    fill
                   />
                 </div>
               </div>
