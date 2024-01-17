@@ -51,7 +51,13 @@ const page = async ({ params }: PageProps) => {
   }
 
   const chatParnerId = user.id === userId1 ? userId2 : userId1;
-  const chatPartner = (await db.get(`user:${chatParnerId}`)) as User;
+
+  const chatParnerRaw = (await fetchRedis(
+    'get',
+    `user:${chatParnerId}`,
+  )) as string;
+
+  const chatPartner = JSON.parse(chatParnerRaw) as User;
 
   const initialMessages = await getChatMessages(chatId);
 
