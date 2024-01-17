@@ -4,7 +4,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 interface loadingProps {}
 
-const loading: FC<loadingProps> = ({}) => {
+const Loading: FC<loadingProps> = ({}) => {
   return (
     <div className="w-full flex flex-col gap-3">
       <Skeleton className="mb-4" height={60} width={500} />
@@ -14,4 +14,4 @@ const loading: FC<loadingProps> = ({}) => {
   );
 };
 
-export default loading;
+export default Loading;
