@@ -72,16 +72,7 @@ const Layout = async ({ children }: layoutProps) => {
               </div>
 
               <ul role="list" className="-mx-2 mt-2 space-y-1">
-                <li>
-                  <Link
-                    href="/dashboard/add"
-                    className="text-gray-700 hover:text-indigo-600
-                        hover:bg-gray-50 group flex gap-3 rounded-md p-2 text-sm leading-6 font-semibold"
-                  >
-                    Hello
-                  </Link>
-                </li>
-                {/* {sideBarOptions.map((option) => {
+                {sideBarOptions.map((option) => {
                   const Icon = Icons[option.Icon];
                   return (
                     <li key={option.id}>
@@ -100,7 +91,7 @@ const Layout = async ({ children }: layoutProps) => {
                       </Link>
                     </li>
                   );
-                })} */}
+                })}
 
                 <li>
                   <FriendRequestsSidebarOptions
