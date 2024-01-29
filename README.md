@@ -25,12 +25,12 @@ Our Real-Time Chat App leverages Next.js to provide a seamless and responsive ch
 ## Installation
 To set up the Real-Time Chat App locally, follow these steps:
 1. Clone the repository:
-   ```bash
+```bash
    git clone https://github.com/yourusername/real-time-chat-app.git
    ```
 
 ### Navigate to the project directory:
-   ```bash
+```bash
    cd real-time-chat-app
    ```
 
