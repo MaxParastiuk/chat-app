@@ -27,13 +27,19 @@ To set up the Real-Time Chat App locally, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/real-time-chat-app.git
-
+   ```
 
 ### Navigate to the project directory:
+   ```bash
    cd real-time-chat-app
+   ```
 
 ### Install dependencies:
+ ```bash
    npm install
+   ```
 ### Start the development server:
+ ```bash
    npm run dev
+   ```
 ### Open your browser and visit http://localhost:3000 to view the application. 🌐🔍
