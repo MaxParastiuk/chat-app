@@ -3,7 +3,7 @@
 Welcome to my Real-Time Chat App repository! 🚀
 
 ## Description
-Our Real-Time Chat App leverages Next.js to provide a seamless and responsive chat experience. Powered by innovative technologies, users can engage in dynamic conversations in real-time, fostering instant connections and meaningful interactions. 💬✨
+My Real-Time Chat App leverages Next.js to provide a seamless and responsive chat experience. Powered by innovative technologies, users can engage in dynamic conversations in real-time, fostering instant connections and meaningful interactions. 💬✨
 
 ## Technologies Used
 - **Next.js**: Provides the foundation for building a React-based web application.
